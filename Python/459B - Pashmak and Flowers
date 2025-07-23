@@ -1,0 +1,26 @@
+t = 1
+
+
+def fun():
+    n = int(input())
+    a = list(map(int, input().split(" ")))
+    mx = max(a)
+    mn = min(a)
+
+    mx_cnt = 0
+    mn_cnt = 0
+    for i in a:
+        if i == mx:
+            mx_cnt += 1
+        elif i == mn:
+            mn_cnt += 1
+
+    if mx == mn:
+        print(mx-mn,(mx_cnt - 1) * (mx_cnt) // 2)
+    else:
+        print(mx-mn,mx_cnt * mn_cnt)
+
+
+while t:
+    fun()
+    t -= 1
